@@ -1,5 +1,5 @@
 # Portfolio
-Modular portfolio site written in Ruby.
+Modular portfolio site written in Ruby.  
 Made while researching Ruby and Ruby on Rails web development for [Tampere University of Applied Sciences's](http://www.tamk.fi/web/tamken) Software production Course.
 
 ## Deploying  
@@ -15,7 +15,7 @@ Made while researching Ruby and Ruby on Rails web development for [Tampere Unive
     * ```bundle install```
 1. Start the server.
     * ```rails server```
-1. Navigate to servers url address. (default is http://localhost:3000)
+1. Navigate to server's url address. (default is http://localhost:3000)
 1. All done!
 
 ### Credits and license
