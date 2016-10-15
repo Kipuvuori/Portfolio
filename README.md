@@ -13,6 +13,7 @@ Made while researching Ruby and Ruby on Rails web development for [Tampere Unive
 1. Navigate to project root. (Directory that has this file in it.)
 1. Install dependencies.
     * ```bundle install```
+1. Replace public/images/photo.png with photo for the portfolio.
 1. Start the server.
     * ```rails server```
 1. Navigate to server's url address. (default is http://localhost:3000)

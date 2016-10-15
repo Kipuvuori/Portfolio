@@ -1,12 +1,4 @@
-class PersonInfo
-    def initialize(title = "", value = "")
-        @title = title
-        @value = value
-    end
-    def title
-        @title
-    end
-    def value
-        @value
-    end
+class PersonInfo  < ActiveRecord::Base
+    belongs_to :person
+    self.table_name = "person_info"
 end

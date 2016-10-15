@@ -11,12 +11,12 @@
                 </div>
             </div>
             <div class="panel panel-danger">
-                <div class="panel-heading">Henkilötiedot</div>
+                <div class="panel-heading"><%= @person.info_title %></div>
                 <div class="panel-body">
                     <div class="row">
                         <table class="table table-borderless">
                             <tbody>
-                                <% @person.info.each do |info| %>
+                                <% @person.person_info.each do |info| %>
                                     <tr>
 
                                         <td>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="col-sm-6 col-sm-pull-6">
-            <% @experiences.each do |history| %>
+            <% @person.experience.each do |history| %>
                 <div class="panel panel-success">
                     <div class="panel-heading"><%= history.title %></div>
                     <div class="panel-body"> <%= history.description %></div>
