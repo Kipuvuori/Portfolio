@@ -52,3 +52,6 @@ gem 'bootstrap-sass', '~> 3.2.0'
 
 # autoprefixer-rails for proper vendor prefixes to CSS code 
 gem 'autoprefixer-rails'
+
+# BCrypt
+gem 'bcrypt', '~> 3.1.7'
