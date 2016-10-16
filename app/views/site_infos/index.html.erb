@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Site Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @site_infos.each do |site_info| %>
+      <tr>
+        <td><%= site_info.name %></td>
+        <td><%= site_info.value %></td>
+        <td><%= link_to 'Show', site_info %></td>
+        <td><%= link_to 'Edit', edit_site_info_path(site_info) %></td>
+        <td><%= link_to 'Destroy', site_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Site Info', new_site_info_path %>

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  #resources :authentications
+  resources :experiences
+  resources :personal_infos
+  resources :site_infos
   get 'home/index'
   get 'home/admin'
   root 'home#index'

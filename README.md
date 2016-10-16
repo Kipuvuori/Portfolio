@@ -4,7 +4,6 @@ Made while researching Ruby and Ruby on Rails web development for [Tampere Unive
 
 ## Deploying  
 
-1. Setup database by following [the documentation](https://github.com/13i224HetekiviLehmus/Portfolio/blob/master/database/README.md).
 1. [Install Ruby.](https://www.ruby-lang.org/en/documentation/installation/)
 1. Install Rails.
     * ```gem install rails```
@@ -13,10 +12,13 @@ Made while researching Ruby and Ruby on Rails web development for [Tampere Unive
 1. Navigate to project root. (Directory that has this file in it.)
 1. Install dependencies.
     * ```bundle install```
-1. Replace public/images/photo.png with photo for the portfolio.
+1. Setup database by following [the documentation](https://github.com/13i224HetekiviLehmus/Portfolio/blob/master/database/README.md).
 1. Start the server.
     * ```rails server```
-1. Navigate to server's url address. (default is http://localhost:3000)
+1. Navigate to server's SERVER:PORT/home/admin (http://localhost:3000/home/admin)
+1. Give new admin username and password.
+1. Configure the portfolio.
+1. See the public portfolio at SERVER:PORT (http://localhost:3000)
 1. All done!
 
 ### Credits and license

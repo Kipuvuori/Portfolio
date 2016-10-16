@@ -5,7 +5,7 @@ require_relative 'config/environment'
 class RootSiteAuth < Rack::Auth::Basic
   def call(env)
     request = Rack::Request.new(env)
-    if ['/home/admin'].include? request.path
+    if ['experiences','personal_infos','site_infos', 'admin'].any? { |word| request.path.include?(word) }
       super
     else
       @app.call(env)
@@ -15,15 +15,14 @@ end
 
 
 
-use RootSiteAuth, "Restricted Area" do |name, password|
-    person = Person.find_by name: name
-    if(person)
-      person.authenticate(password)
+use RootSiteAuth, "Restricted Area" do |username, password|
+    name = "admin"
+    authentication = Authentication.find_by name: name
+    if(authentication)
+      (authentication.username == username and authentication.authenticate(password))
     else
-      Person.create(name:name, info_title: "Personal Info", password: password)
+      Authentication.create(name:name, username: username,  password: password)
     end
 end
-
-run Rails.application
 
 run Rails.application

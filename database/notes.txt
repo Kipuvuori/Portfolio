@@ -1,0 +1,9 @@
+DROP DATABASE `portfolio`;
+CREATE DATABASE `portfolio` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+rails g scaffold SiteInfo name:string value:string 
+rails g scaffold PersonalInfo title:string value:string
+rails g scaffold Experience title:string description:text start:string ending:string
+rails g scaffold Authentication name:string username:string password_digest:string
+
+bin/rails db:migrate RAILS_ENV=development
