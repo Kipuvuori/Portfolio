@@ -18,10 +18,9 @@ end
 use RootSiteAuth, "Restricted Area" do |name, password|
     person = Person.find_by name: name
     if(person)
-      hash = person.password_digest
-      password == hash
+      person.authenticate(password)
     else
-      Person.create(id: false, name:name, info_title: "Personal Info", password_digest: password)
+      Person.create(name:name, info_title: "Personal Info", password: password)
     end
 end
 
