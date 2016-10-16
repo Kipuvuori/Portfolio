@@ -1,0 +1,16 @@
+default: &default
+  adapter: mysql2
+  database: portfolio
+  username: root
+  host: localhost
+  socket: /var/run/mysqld/mysqld.sock
+  url: mysql2://localhost/portfolio
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
