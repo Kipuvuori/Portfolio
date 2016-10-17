@@ -5,7 +5,8 @@ require_relative 'config/environment'
 class RootSiteAuth < Rack::Auth::Basic
   def call(env)
     request = Rack::Request.new(env)
-    if ['experiences','personal_infos','site_infos', 'admin'].any? { |word| request.path.include?(word) }
+    puts request
+    if ['experiences','personal_infos','site_infos', 'settings'].any? { |word| request.path.include?(word) }
       super
     else
       @app.call(env)
