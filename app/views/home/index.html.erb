@@ -1,58 +1,52 @@
 <div class="container">
-    <div class="page-header">
-        <h1>
-          <% if @page_title then %>
-              <%= @page_title.value %>
-          <% end %>
-        </h1>
-    </div>
-    <div class="row">
-        <div class="col-sm-6 col-sm-push-6">
-          <% if @photo then %>
-            <div class="thumbnail">
-                <%= image_tag(@photo.value, :alt => "Photo of yourself", :width => "100%", :height => "100%") %>
-                <% if @photo_description then %>
-                  <div class="caption">
-                      <%= @photo_description.value %>
-                  </div>
-                <% end %>
-            </div>
-          <% end %>
-          <div class="panel panel-danger">
-              <div class="panel-heading">
-                <% if @personal_info_title then %>
-                    <%= @personal_info_title.value %>
-                <% end %>
-              </div>
-              <div class="panel-body">
-                  <div class="row">
-                      <table class="table table-borderless">
-                          <tbody>
-                              <% @personal_infos.each do |info| %>
-                                  <tr>
+  <div class="page-header">
+    <h1>
+      <% if @page_title then %>
+          <%= @page_title.value %>
+      <% end %>
+    </h1>
+  </div>
 
-                                      <td>
-                                          <b><%= info.title %></b>
-                                      </td>
-                                      <td>
-                                          <%= info.value %>
-                                      </td>
-                                  <tr>
-                              <% end %>
-                          </tbody>
-                      </table>
-                  </div>
+  <div class="col-xs-12 col-sm-6 col-sm-push-6" data-mh="personal">
+    <% if @photo then %>
+        <div class="thumbnail">
+          <%= image_tag(@photo.value, :alt => "Photo of yourself", :width => "100%", :height => "100%") %>
+          <% if @photo_description then %>
+              <div class="caption">
+                <%= @photo_description.value %>
               </div>
-          </div>
+          <% end %>
         </div>
-        <div class="col-sm-6 col-sm-pull-6">
-            <% @experiences.each do |history| %>
-                <div class="panel panel-success">
-                    <div class="panel-heading"><%= history.title %></div>
-                    <div class="panel-body"> <%= history.description %></div>
-                    <div class="panel-footer"> <%= history.start %> - <%= history.ending %></div>
-                </div>
-            <% end %>
-        </div>
+    <% end %>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-sm-pull-6" data-mh="personal">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <% if @personal_info_title then %>
+            <%= @personal_info_title.value %>
+        <% end %>
+      </div>
+      <div class="panel-body">
+        <% @personal_infos.each do |info| %>
+            <div class="row">
+              <strong><%= info.title %>: </strong>
+              <%= info.value %>
+            </div>
+            <br>
+        <% end %>
+      </div>
     </div>
+  </div>
+
+
+  <% @experiences.each do |history| %>
+      <div class="col-xs-12 col-sm-6" data-mh="experiences">
+        <div class="panel panel-primary">
+          <div class="panel-heading"><%= history.title %></div>
+          <div class="panel-body"> <%= history.description %></div>
+          <div class="panel-footer"> <%= history.start %> - <%= history.ending %></div>
+        </div>
+      </div>
+  <% end %>
 </div>
