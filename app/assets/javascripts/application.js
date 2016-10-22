@@ -14,5 +14,6 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
-//= require sweetalert
+//= require sweetalert2
+//= require rails-sweetalert2-confirm
 //= require_tree .
