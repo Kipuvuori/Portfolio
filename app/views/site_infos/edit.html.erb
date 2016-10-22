@@ -2,5 +2,6 @@
 
 <%= render 'form', site_info: @site_info %>
 
-<%= link_to 'Show', @site_info %> |
-<%= link_to 'Back', site_infos_path %>
+
+<%= link_to 'Show', @site_info, :class => 'btn btn-default' %>
+<%= link_to 'Back', site_infos_path, :class => 'btn btn-warning'  %>

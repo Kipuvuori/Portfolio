@@ -2,7 +2,7 @@
 
 <h1>Personal Infos</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -16,9 +16,30 @@
       <tr>
         <td><%= personal_info.title %></td>
         <td><%= personal_info.value %></td>
-        <td><%= link_to 'Show', personal_info %></td>
-        <td><%= link_to 'Edit', edit_personal_info_path(personal_info) %></td>
-        <td><%= link_to 'Destroy', personal_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to  personal_info, :class => 'btn btn-default' do %>
+              <span class="glyphicon glyphicon-eye-open"></span>
+              <div class="hidden-xs">
+                Show
+              </div>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to edit_personal_info_path(personal_info), :class => 'btn btn-default' do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+              <div class="hidden-xs">
+                Edit
+              </div>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to  personal_info, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' do %>
+              <span class="glyphicon glyphicon-trash"></span>
+              <div class="hidden-xs">
+                Destroy
+              </div>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +47,9 @@
 
 <br>
 
-<%= link_to 'New Personal Info', new_personal_info_path %>
+<%= link_to  new_personal_info_path, :class => 'btn btn-info' do %>
+    <span class="glyphicon glyphicon-plus-sign"></span>
+    <div class="hidden-xs">
+      New Personal Info
+    </div>
+<% end %>
