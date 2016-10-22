@@ -55,3 +55,6 @@ gem 'autoprefixer-rails'
 
 # BCrypt
 gem 'bcrypt', '~> 3.1.7'
+
+# Sweetalert
+gem 'sweetalert-rails'

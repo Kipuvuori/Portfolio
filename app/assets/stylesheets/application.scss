@@ -25,9 +25,18 @@ $body-bg:               #C9B7B1;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
+//other overrides
 body {
-  background-image: url('/images/backgrounds/shattered.png')
+  background-image: image-url('/assets/background.png');
 }
 
+iframe{
+  width:100%;
+  height:100vh;
+  background-color: $body-bg;
+}
+
+//imports
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "sweetalert";

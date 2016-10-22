@@ -3,7 +3,7 @@
     <h1>Settings</h1>
   </div>
 
-  <div class="col-sm-6" data-mh="row1">
+  <div class="col-sm-6">
     <div class="panel panel-primary">
       <div class="panel-heading iframe-heading" id="panel_heading_site_infos">
         Site Infos (click to resize)
@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <div class="col-sm-6" data-mh="row1">
+  <div class="col-sm-6">
     <div class="panel panel-primary">
       <div class="panel-heading iframe-heading" id="panel_heading_personal_infos">
         Personal Infos (click to resize)
@@ -35,4 +35,14 @@
       </div>
     </div>
   </div>
+
 </div>
+
+<% content_for :javascript do %>
+    <script type='text/javascript'>
+      swal("Awesome!");
+      console.log("kkek");
+    </script>
+
+<% end %>
+
