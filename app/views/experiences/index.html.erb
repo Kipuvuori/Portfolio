@@ -2,7 +2,7 @@
 
 <h1>Experiences</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -20,9 +20,30 @@
         <td><%= experience.description %></td>
         <td><%= experience.start %></td>
         <td><%= experience.ending %></td>
-        <td><%= link_to 'Show', experience %></td>
-        <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
-        <td><%= link_to 'Destroy', experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to experience, :class => 'btn btn-default'  do %>
+              <span class="glyphicon glyphicon-eye-open"></span>
+              <div class="hidden-xs">
+                Show
+              </div>
+          <% end %>
+          </td>
+        <td>
+          <%= link_to edit_experience_path(experience), :class => 'btn btn-default' do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+              <div class="hidden-xs">
+                Edit
+              </div>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to experience, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' do %>
+              <span class="glyphicon glyphicon-trash"></span>
+              <div class="hidden-xs">
+                Destroy
+              </div>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +51,8 @@
 
 <br>
 
-<%= link_to 'New Experience', new_experience_path %>
+<%= link_to new_experience_path, :class => 'btn btn-info' do %>
+    <span class="glyphicon glyphicon-plus-sign"></span>
+    New Experience
+<% end %>
+

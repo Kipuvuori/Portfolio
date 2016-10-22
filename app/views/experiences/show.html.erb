@@ -20,5 +20,13 @@
   <%= @experience.ending %>
 </p>
 
-<%= link_to 'Edit', edit_experience_path(@experience) %> |
-<%= link_to 'Back', experiences_path %>
+<%= link_to edit_experience_path(@experience), :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+<% end %>
+
+<%= link_to experiences_path, :class => 'btn btn-warning' do %>
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    Back
+<% end %>
+

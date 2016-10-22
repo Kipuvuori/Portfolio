@@ -1,4 +1,4 @@
-<%= form_for(personal_info) do |f| %>
+<%= form_for(personal_info, :html => {:class => 'form-inline'}) do |f| %>
   <% if personal_info.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(personal_info.errors.count, "error") %> prohibited this personal_info from being saved:</h2>

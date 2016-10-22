@@ -2,5 +2,12 @@
 
 <%= render 'form', experience: @experience %>
 
-<%= link_to 'Show', @experience %> |
-<%= link_to 'Back', experiences_path %>
+<%= link_to @experience, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-eye-open"></span>
+    Show
+<% end %>
+
+<%= link_to experiences_path , :class => 'btn btn-warning' do %>
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    Back
+<% end %>
