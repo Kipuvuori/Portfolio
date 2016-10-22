@@ -26,6 +26,5 @@
 *.iml
 .idea
 
-#Ingore public images
-public/images/
+#Ingore profile picture
 public/images/face.jpg
