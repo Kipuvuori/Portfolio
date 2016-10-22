@@ -10,5 +10,12 @@
   <%= @site_info.value %>
 </p>
 
-<%= link_to 'Edit', edit_site_info_path(@site_info) %> |
-<%= link_to 'Back', site_infos_path %>
+<%= link_to edit_site_info_path(@site_info) , :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+<% end %>
+
+<%= link_to site_infos_path , :class => 'btn btn-warning' do %>
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    Back
+<% end %>

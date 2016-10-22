@@ -3,5 +3,12 @@
 <%= render 'form', site_info: @site_info %>
 
 
-<%= link_to 'Show', @site_info, :class => 'btn btn-default' %>
-<%= link_to 'Back', site_infos_path, :class => 'btn btn-warning'  %>
+<%= link_to @site_info, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-eye-open"></span>
+      Show
+<% end %>
+
+<%= link_to site_infos_path, :class => 'btn btn-warning' do %>
+    <span class="glyphicon glyphicon-chevron-left"></span>
+      Back
+<% end %>
