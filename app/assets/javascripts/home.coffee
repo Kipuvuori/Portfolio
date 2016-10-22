@@ -13,6 +13,8 @@ iframeChanged = (iframe) ->
     html = $(iframe).contents().find('html')
     if html.length > 0
       $(iframe).height($(html[0]).height())
+      html.find('body').css({"background-image": "none !important"})
+      console.log(html.find('body'))
       return true
   false
 
