@@ -21,3 +21,11 @@
 .byebug_history
 .idea
 *.bak
+
+#Ignore IntelliJ IDEA project files
+*.iml
+.idea
+
+#Ingore public images
+public/images/
+public/images/face.jpg

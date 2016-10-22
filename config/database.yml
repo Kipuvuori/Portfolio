@@ -1,7 +1,8 @@
 default: &default
   adapter: mysql2
   database: portfolio
-  username: root
+  username: rails
+  password: Yh$fmY4xjv^BaGQ#PXhb*puaFENv2#Zwxe98GJFn
   host: localhost
   socket: /var/run/mysqld/mysqld.sock
   url: mysql2://localhost/portfolio
