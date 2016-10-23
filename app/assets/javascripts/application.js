@@ -17,4 +17,6 @@
 //= require turbolinks
 //= require sweetalert2
 //= require rails-sweetalert2-confirm
+//= require jquery-readyselector
+//= require_tree ./sitewide
 //= require_tree .

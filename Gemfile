@@ -58,6 +58,5 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Sweetalert
 gem 'rails-sweetalert2-confirm'
-gem 'sweetalert2'
 
 gem 'jquery-turbolinks'
