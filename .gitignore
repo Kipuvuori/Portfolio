@@ -21,3 +21,13 @@
 .byebug_history
 .idea
 *.bak
+
+#Ignore IntelliJ IDEA project files
+*.iml
+.idea
+
+#Ingore profile picture
+public/images/face.jpg
+
+# Ignore database settings
+config/database.yml

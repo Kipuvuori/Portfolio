@@ -2,4 +2,7 @@
 
 <%= render 'form', personal_info: @personal_info %>
 
-<%= link_to 'Back', personal_infos_path %>
+<%= link_to  personal_infos_path, :class => 'btn btn-warning' do %>
+    <span class="glyphicon glyphicon-chevron-left"></span>
+      Back
+<% end %>

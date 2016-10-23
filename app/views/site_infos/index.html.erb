@@ -2,7 +2,7 @@
 
 <h1>Site Infos</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,29 @@
       <tr>
         <td><%= site_info.name %></td>
         <td><%= site_info.value %></td>
-        <td><%= link_to 'Show', site_info %></td>
-        <td><%= link_to 'Edit', edit_site_info_path(site_info) %></td>
-        <td><%= link_to 'Destroy', site_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to  site_info , :class => 'btn btn-default' do %>
+              <span class="glyphicon glyphicon-eye-open"></span>
+              <div class="hidden-xs">
+                Show
+              </div>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to edit_site_info_path(site_info),:class => 'btn btn-default' do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+              <div class="hidden-xs">
+                Edit
+              </div>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to site_info, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' do %>
+              <span class="glyphicon glyphicon-trash"></span>
+              <div class="hidden-xs">
+                Destroy
+              </div>
+          <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +46,7 @@
 
 <br>
 
-<%= link_to 'New Site Info', new_site_info_path %>
+<%= link_to new_site_info_path,  :class => 'btn btn-info' do %>
+    <span class="glyphicon glyphicon-plus-sign"></span>
+      New Site Info
+<% end %>

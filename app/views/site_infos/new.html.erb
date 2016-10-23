@@ -2,4 +2,7 @@
 
 <%= render 'form', site_info: @site_info %>
 
-<%= link_to 'Back', site_infos_path %>
+<%= link_to site_infos_path, :class => 'btn btn-warning' do %>
+    <span class="glyphicon glyphicon-chevron-left"></span>
+      Back
+<% end %>

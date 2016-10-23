@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require sweetalert2
+ */
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              #2E3349;   // #333
+$gray:                   #7A7A8A; // #555
+$gray-light:             #9E716A; // #777
+$gray-lighter:           #C29173; // #eee
+
+$brand-primary:         #5B5564; // #337ab7
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #C9B7B1;
+//** Global text color on `<body>`.
+$text-color:            $gray-dark !default;
+
+//other overrides
+body {
+  background-image: image-url('/assets/background.png');
+}
+
+iframe{
+  width:100%;
+  height:100vh;
+  background: none !important;
+}
+
+//imports
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.iFrame
+{
+  background: none !important;
+}
+

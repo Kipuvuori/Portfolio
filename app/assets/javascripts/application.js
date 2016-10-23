@@ -11,6 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require sweetalert2
+//= require rails-sweetalert2-confirm
+//= require jquery-readyselector
+//= require_tree ./sitewide
 //= require_tree .
