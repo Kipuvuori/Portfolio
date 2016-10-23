@@ -6,7 +6,7 @@ class RootSiteAuth < Rack::Auth::Basic
   def call(env)
     request = Rack::Request.new(env)
     puts request.path
-    if request.path.start_with?("/experiences", "/site_infos", '/site_infos', '/settings')
+    if request.path.start_with?("/experiences", "/site_infos", '/personal_infos', '/settings')
       super
     else
       @app.call(env)
