@@ -14,6 +14,8 @@ Made while researching Ruby and Ruby on Rails web development for [Tampere Unive
 1. Navigate to project root.
 1. Make tables by running.
     * ```bin/rails db:migrate RAILS_ENV=development```
+1. Seed database
+    * ```rake db:seed```
 1. All done!
 
 ### Credits and license
