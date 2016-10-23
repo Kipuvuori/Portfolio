@@ -28,3 +28,6 @@
 
 #Ingore profile picture
 public/images/face.jpg
+
+# Ignore database settings
+config/database.yml

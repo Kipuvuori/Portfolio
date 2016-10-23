@@ -9,7 +9,9 @@ Made while researching Ruby and Ruby on Rails web development for [Tampere Unive
     * For example: ```mysql -u root -p```
 1. Make the database.
     * ```CREATE DATABASE `portfolio` /*!40100 DEFAULT CHARACTER SET utf8 */;```
-1. Close the database and navigate to project root.
+1. Close the database.
+1. Make config/database.yml file with help of [config/database.yml.EXAMPLE](https://raw.githubusercontent.com/13i224HetekiviLehmus/Portfolio/master/config/database.yml.EXAMPLE) file.
+1. Navigate to project root.
 1. Make tables by running.
     * ```bin/rails db:migrate RAILS_ENV=development```
 1. All done!
