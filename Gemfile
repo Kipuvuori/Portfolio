@@ -60,3 +60,5 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rails-sweetalert2-confirm'
 
 gem 'jquery-turbolinks'
+
+gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
